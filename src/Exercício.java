@@ -10,6 +10,10 @@ public class Exercício {
         System.out.printf("A %s está em promoção? (s/n)", name);
         var isOferta = scanner.next().equalsIgnoreCase("s");
 
+
+
+
+        
         /*if (valor >= 20) {
             System.out.println("Sua comida chegará em 20 minutos\n");
         } else if (valor >=15 && isOferta) {
