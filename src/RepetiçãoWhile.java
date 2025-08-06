@@ -8,5 +8,5 @@ public static  void main(String[] args) {
         name = scanner.next();
         System.out.println(name);
     }
-
+    scanner.close();
 }

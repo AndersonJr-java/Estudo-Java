@@ -13,14 +13,14 @@ public class Exercício {
 
 
 
-        
-        /*if (valor >= 20) {
+
+        if (valor >= 20) {
             System.out.println("Sua comida chegará em 20 minutos\n");
         } else if (valor >=15 && isOferta) {
             System.out.printf("Você pediu um(a) %s\nPois seu preço de %s consegue pagar ela em promoção\nEla chegará em 20 minutos\n", name, valor);
             } else {
                 System.out.println("Deixe para um outro dia!\n");
-            }*/
+            }
          
         /*var comidaPaga = (valor >= 20) || (valor >= 15 && isOferta);
         var message = "";
@@ -39,6 +39,8 @@ public class Exercício {
                 "Deixe para outro dia\n";
             System.out.println(message)
           */
+
+          scanner.close();
     }
         
 }
