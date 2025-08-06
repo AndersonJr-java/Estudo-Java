@@ -18,24 +18,23 @@ public class Exercício {
                 System.out.println("Deixe para um outro dia!\n");
             }*/
          
-        var comidaPaga = (valor >= 20) || (valor >= 15 && isOferta);
+        /*var comidaPaga = (valor >= 20) || (valor >= 15 && isOferta);
         var message = "";
             if (comidaPaga) {
             message = name + "chegará em 20 minutos \n";
             } else {
             message = "Deixe para outro dia \n";
              }
-             System.out.println(message); 
+             System.out.println(message);/* */
          
 
          /* Operador Elvis
         var comidaPaga = (valor >= 20) || (valor >= 15 && isOferta);
         var message = comidaPaga?
                 "Sua comida chegará em 20 minutos\n":
-                "Deixe para outro dia"\n
+                "Deixe para outro dia\n";
             System.out.println(message)
           */
-        System.out.println("Fim da execução");
     }
         
 }
