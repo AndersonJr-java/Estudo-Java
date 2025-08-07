@@ -1,5 +1,7 @@
+package estudo;
 import java.util.Scanner;
 
+public class RepeticaoWhile{
 public static  void main(String[] args) {
     var scanner = new Scanner(System.in);
     var name = "";
@@ -9,4 +11,5 @@ public static  void main(String[] args) {
         System.out.println(name);
     }
     scanner.close();
+}
 }

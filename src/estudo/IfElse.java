@@ -1,6 +1,7 @@
+package estudo;
 import java.util.Scanner;
 
-public class Exercício {
+public class IfElse {
     public static void  main(String[] args) {
         var scanner = new Scanner(System.in);
         System.out.println("Informe sua comida favorita");
@@ -9,10 +10,6 @@ public class Exercício {
         var valor = scanner.nextInt();
         System.out.printf("A %s está em promoção? (s/n)", name);
         var isOferta = scanner.next().equalsIgnoreCase("s");
-
-
-
-
 
         if (valor >= 20) {
             System.out.println("Sua comida chegará em 20 minutos\n");

@@ -1,6 +1,7 @@
+package estudo;
 import java.util.Scanner;
 
-public class Estudo {
+public class Case {
 public static void main (String[] args) {
    var scanner = new Scanner(System.in);
     System.out.println("informe quantos cm tem seu pinto");

@@ -1,3 +1,4 @@
+package estudo;
 import java.util.Scanner;
 
 public class Contas {
