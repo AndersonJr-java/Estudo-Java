@@ -4,38 +4,38 @@ import java.util.Scanner;
 public class Case {
 public static void main (String[] args) {
    var scanner = new Scanner(System.in);
-    System.out.println("informe quantos cm tem seu pinto");
+    System.out.println("informe quantos cm você tem");
     var option = scanner.nextInt();
     switch (option) {
-        case 1:
-        System.out.println("Se mata");
+        case 100:
+        System.out.println("Bem pequeno");
         break;
-        case 2:
-        System.out.println("taca fogo");
+        case 110:
+        System.out.println("Faça uma melhor dieta");
         break;
-        case 3:
-        System.out.println("corta");
+        case 120:
+        System.out.println("Você deve ter 12 anos");
         break;
-        case 4:
-        System.out.println("faz uma cirurgia");
+        case 130:
+        System.out.println("Um pouco pequeno");
         break;
-        case 5:
-        System.out.println("vire mulher com clitorios avantajado");
+        case 140:
+        System.out.println("Está bom para uma criança");
         break;
-        case 6:
-        System.out.println("vc é criança?");
+        case 150:
+        System.out.println("Tamanho rasoável");
         break;
-        case 7:
-        System.out.println("ta sainda da juventude?");
+        case 160:
+        System.out.println("Cresça só mais um pouco");
         break;
-        case 8:
-        System.out.println("tá igual o china");
+        case 170:
+        System.out.println("Muito bom");
         break;
-        case 9:
-        System.out.println("Se mata");
+        case 180:
+        System.out.println("Altura ideal");
         break;
         default:
-        System.out.println("bom tamanho");
+        System.out.println("Você joga Basquete?");
         break;
         
         
