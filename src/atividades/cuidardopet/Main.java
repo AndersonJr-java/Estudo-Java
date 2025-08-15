@@ -35,7 +35,7 @@ public class Main {
                 case 8 -> petMachine.removePet();
                 case 9 -> petMachine.wash();
                 case 0 -> System.exit(0);
-                default -> System.out.println("Opçõ inválida");
+                default -> System.out.println("Opção inválida");
             }
         } while (true);
     }
