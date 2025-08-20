@@ -27,6 +27,24 @@ public class Main {
             System.out.println("9 - Sair");
             option = scanner.nextInt();
         
+             switch (option) {
+
+                case 1 -> motor.CarroLigado();
+                case 2 -> motor.CarroDesligado();
+                case 3 -> motor.Acelerar();
+                case 4 -> motor.Desacelerar();
+                case 5 -> motor.VirarDireita();
+                case 6 -> motor.VirarEsquerda();
+                case 7 -> motor.ChecarVelocidade();
+                /* case 8 -> subirMarcha();
+                 * case 9 -> descerMarcha(); */
+                case 9 -> System.exit(0);
+
+                default -> System.out.println("Opção inválida");
+            }
+
         } while (true);
+
+       
     }
 }
