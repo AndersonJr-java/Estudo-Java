@@ -23,8 +23,10 @@ public class Main {
             System.out.println("5 - Virar a esquerda");
             System.out.println("6 - Virar a direita");
             System.out.println("7 - Verificar velocidade");
-            System.out.println("8 - Trocar a marcha");
-            System.out.println("9 - Sair");
+            System.out.println("8 - Subir marcha");
+            System.out.println("9 - Descer marcha");
+            System.out.println("10 - Checar a marcha");
+            System.out.println("0 - Sair");
             option = scanner.nextInt();
         
              switch (option) {
@@ -36,9 +38,10 @@ public class Main {
                 case 5 -> motor.VirarDireita();
                 case 6 -> motor.VirarEsquerda();
                 case 7 -> motor.ChecarVelocidade();
-                /* case 8 -> subirMarcha();
-                 * case 9 -> descerMarcha(); */
-                case 9 -> System.exit(0);
+                case 8 -> motor.SubirMarcha();
+                case 9 -> motor.DescerMarcha();
+                case 10 -> motor.checarMarcha();
+                case 0 -> System.exit(0);
 
                 default -> System.out.println("Opção inválida");
             }

@@ -7,6 +7,8 @@ public class Motor {
 
     private boolean ligarCarro = false;
 
+    private int marcha = 0;
+
     public Motor(){
     }
 
@@ -31,10 +33,14 @@ public class Motor {
     if (this.ligarCarro == false){
         System.out.println("Você já desligou seu carro");
         return;
-    }
-
-    SetCarro(false);
-    System.out.println("Você desligou seu carro");
+    } else if (this.velocidade >= 1){
+        System.out.println("Diminua sua velocidade para poder desligar o carro");
+        return;
+    } else if (this.marcha >= 1) {
+        System.out.println("Diminua sua marcha para poder desligar o carro");
+    } else
+        SetCarro(false);
+        System.out.println("Você desligou seu carro");
     }
 
     public void Acelerar(){
@@ -66,7 +72,9 @@ public class Motor {
     }
 
     public void VirarDireita(){
-        if (this.velocidade <= 0){
+         if (this.ligarCarro == false){
+            System.out.println("Você está com o carro desligado");
+        } else if (this.velocidade <= 0){
             System.out.println("Velocidade insuficiente para virar");
         } else if (this.velocidade >= 40){
             System.out.println("Diminua sua velocidade para virar");
@@ -77,7 +85,10 @@ public class Motor {
     }
 
     public void VirarEsquerda(){
-        if (this.velocidade <= 0){
+        if (this.ligarCarro == false){
+            System.out.println("Você está com o carro desligado");
+        }
+        else if (this.velocidade <= 0){
             System.out.println("Velocidade insuficiente para virar");
         } else if (this.velocidade >= 40){
             System.out.println("Diminua sua velocidade para virar");
@@ -96,4 +107,32 @@ public class Motor {
         System.out.println(" Você tem " +amount+ " de velocidade em seu carro");
     }
 
+    public int getMarcha(){
+        return marcha;
+    }
+
+    public void SubirMarcha(){
+        if (this.marcha >= 6) {
+            System.out.println("Sua marcha está no máximo possível");
+        } else if (this.ligarCarro == false) {
+            System.out.println("Ligue seu carro para poder mudar de marcha");
+        } else {
+            this.marcha += 1;
+        }
+    }
+
+    public void DescerMarcha(){
+        if (this.ligarCarro == false) {
+            System.out.println("Ligue seu carro para poder mudar de marcha");
+        } else if (this.marcha <= 0) {
+            System.out.println("Sua marcha está no mínimo possível");
+        } else {
+            this.marcha -= 1;
+        }
+    }
+
+    public void checarMarcha(){
+        var amount = getMarcha();
+        System.out.println("Você está com " +amount+ " de marcha em seu carro");
+    }
 }
