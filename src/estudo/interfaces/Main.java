@@ -2,13 +2,15 @@ package estudo.interfaces;
 
 import java.util.Scanner;
 
-public class main {
+public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static  final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
         int option;
-        FormaGeometrica formaGeometrica = null;
+
+        FormaGeometrica formaGeometrica;
+
         while (true) {
             System.out.println("Escolha qual seria a sua forma geométrica");
             System.out.println("1 - Quadrado");
@@ -18,11 +20,11 @@ public class main {
             option = scanner.nextInt();
 
             if (option == 1) {
-                criarQuadrado();
+                formaGeometrica  = criarQuadrado();
             } else if (option == 2) {
-                criarCirculo();
+                formaGeometrica = criarCirculo();
             } else if (option == 3) {
-                criarRetangulo();
+                formaGeometrica = criarRetangulo();
             } else if (option == 4){
                 break;
             } else {
