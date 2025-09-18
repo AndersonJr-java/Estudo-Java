@@ -1,20 +1,14 @@
 package atividades.tributagem;
 
-import estudo.interfaces.Circulo;
-import estudo.interfaces.FormaGeometrica;
-import estudo.interfaces.Quadrado;
-import estudo.interfaces.Retangulo;
-
-import javax.swing.event.TreeSelectionListener;
 import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
         int option;
-        Tributo tributo = null;
+        Tributo tributo;
         while (true) {
             System.out.println("Escolha qual tipo é seu produto");
             System.out.println("1 - Alimentação");
