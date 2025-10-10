@@ -10,30 +10,27 @@ public class Main {
         var scanner = new Scanner(System.in);
         System.out.println("Informe o número telefonico que queira discar");
         String numeroTelefonico = scanner.next();
-        var formatado = "";
-        var tipo = "";
-        var tamanho = numeroTelefonico.length();
-        switch (tamanho) {
-            case 8 -> {
-                formatado = TipoTelefonico.TELEFONE_FIXO.getNumeroFormatado(numeroTelefonico);
-                tipo = "TELEFONE FIXO";
-                System.out.printf("Seu número é: %s, e o tipo que procura é: %s", formatado, tipo);
-            }
-            case 10 -> {
-                formatado = TipoTelefonico.TELEFONE_FIXO_DDD.getNumeroFormatado(numeroTelefonico);
-                tipo = "TELEFONE FIXO COM DDD";
-                System.out.printf("Seu número é: %s, e o tipo que procura é: %s", formatado, tipo);
-            }
-            case 9 -> {
-                formatado = TipoTelefonico.CELULAR.getNumeroFormatado(numeroTelefonico);
-                tipo = "CELULAR";
-                System.out.printf("Seu número é: %s, e o tipo que procura é: %s", formatado, tipo);
-            }
-            case 11 -> {
-                formatado = TipoTelefonico.CELULAR_DDD.getNumeroFormatado(numeroTelefonico);
-                tipo = "CELULAR COM DDD";
-                System.out.printf("Seu número é: %s, e o tipo que procura é: %s", formatado, tipo);
-            }
+        switch (numeroTelefonico.length()) {
+            case 8 ->
+                System.out.printf("Seu número é: %s, e o tipo que procura é: %s",
+                        TipoTelefonico.TELEFONE_FIXO.getNumeroFormatado(numeroTelefonico),
+                        TipoTelefonico.TELEFONE_FIXO.getTipo());
+
+            case 10 ->
+                System.out.printf("Seu número é: %s, e o tipo que procura é: %s",
+                        TipoTelefonico.TELEFONE_FIXO_DDD.getNumeroFormatado(numeroTelefonico),
+                        TipoTelefonico.TELEFONE_FIXO_DDD.getTipo());
+
+            case 9 ->
+                System.out.printf("Seu número é: %s, e o tipo que procura é: %s",
+                        TipoTelefonico.CELULAR.getNumeroFormatado(numeroTelefonico),
+                        TipoTelefonico.CELULAR.getTipo());
+
+            case 11 ->
+                System.out.printf("Seu número é: %s, e o tipo que procura é: %s",
+                        TipoTelefonico.CELULAR_DDD.getNumeroFormatado(numeroTelefonico),
+                        TipoTelefonico.CELULAR_DDD.getTipo());
+
             default -> System.out.println("Numero não existente, por favor cheque se está certo");
         }
     }
